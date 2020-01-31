@@ -5,6 +5,7 @@ WORKDIR /app
 COPY ./package.json .
 RUN npm install
 
-COPY . .
+#Removing copy since  docker-compose.yml refers to the files outside container after mapping using volumes.
+#COPY . .
 
 CMD ["npm", "run", "start"]
