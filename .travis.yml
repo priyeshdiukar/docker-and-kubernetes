@@ -6,4 +6,4 @@ before_install:
     - docker build -f ./frontend/Dockerfile.dev -t priyeshdiukar/docker-react ./frontend
 
 script:
-    - docker run priyeshdiukar/docker-react npm run test -- --coverage
+    - docker run -e CI=true priyeshdiukar/docker-react npm run test
