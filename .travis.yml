@@ -3,7 +3,7 @@ services:
     - docker
 
 before_install:
-    - docker build -f /frontend/Dockerfile.dev -t priyeshdiukar/docker-react /frontend
+    - docker build -f ./frontend/Dockerfile.dev -t priyeshdiukar/docker-react ./frontend
 
 script:
     - docker run priyeshdiukar/docker-react npm run test -- --coverage
