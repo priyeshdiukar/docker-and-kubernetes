@@ -7,10 +7,3 @@ test('Test that sigin in link in rendered', () => {
   const linkElement = getByText(/sign in/i);
   expect(linkElement).toBeInTheDocument();
 });
-
-test('renders learn react link', () => {
-  const { getByText } = render(<App />);
-  const linkElement = getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
-});
-
